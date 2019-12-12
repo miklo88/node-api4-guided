@@ -1,11 +1,8 @@
 const express = require("express");
-// const dotenv = require("dotenv");
-
-// dotenv.config();
 
 const app = express();
-const host = "0.0.0.0";
-const port = 8080;
+const host = process.env.HOST || "0.0.0.0";
+const port = process.env.PORT || 8080;
 
 app.use((req, res, next) => {
   console.log(
